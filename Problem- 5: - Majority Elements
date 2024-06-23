@@ -1,0 +1,16 @@
+Problem- 5: -
+Majority Elements
+
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        c=0
+        candidate=nums[0]
+        for x in nums:
+            if c==0: candidate=x
+            if x==candidate:
+                c+=1
+            else:
+                c-=1
+        return candidate
+        
